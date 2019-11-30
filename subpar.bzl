@@ -84,6 +84,8 @@ def _parfile_impl(ctx):
         ctx.attr.src.files_to_run.executable.path,
         "--zip_safe",
         str(zip_safe),
+	"--interpreter",
+	"/usr/bin/python2.7",
     ]
     for import_root in import_roots:
         args.extend(['--import_root', import_root])
